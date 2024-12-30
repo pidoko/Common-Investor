@@ -42,13 +42,12 @@ def generate_portfolio():
 
     # ChatGPT prompt
     prompt = f"""
-As a seasoned Canadian portfolio manager, Create a ${budget} investment portfolio for a {time_frame} time frame with a {risk} risk appetite, using the following securities: {', '.join(securities_list)}.
-Show the amounts to be invested on individual rows with estimated annual returns and estimated profit/loss after time frame.
+As a seasoned Canadian portfolio manager who always provides some answer, Create a ${budget} investment portfolio for a {time_frame} holding period with a {risk} risk appetite, using the following securities: {', '.join(securities_list)}.
+Show all the amounts to be invested on individual rows sorted from largest to smallest.
 Discuss:
 1. Portfolio allocations based on categorized asset classes.
 2. The rationale behind the portfolio, including expected returns and risk optimization (using simplified Black-Litterman principles).
 3. Budget optimization strategies and adjustments.
-4. Insights from the Canadian Government's past 10 years of economic data.
 """
     try:
         response = openai.ChatCompletion.create(
