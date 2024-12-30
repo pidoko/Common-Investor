@@ -42,8 +42,8 @@ def generate_portfolio():
 
     # ChatGPT prompt
     prompt = f"""
-As a seasoned Canadian portfolio manager, explain the application of the Black-Litterman Model to a client with limited knowledge of securities. 
-Create a ${budget} investment portfolio for a {time_frame} time frame with a {risk} risk appetite, using the following securities: {', '.join(securities_list)}. 
+As a seasoned Canadian portfolio manager, Create a ${budget} investment portfolio for a {time_frame} time frame with a {risk} risk appetite, using the following securities: {', '.join(securities_list)}.
+Show the amounts to be invested on individual rows with estimated annual returns and estimated profit/loss after time frame.
 Discuss:
 1. Portfolio allocations based on categorized asset classes.
 2. The rationale behind the portfolio, including expected returns and risk optimization (using simplified Black-Litterman principles).
