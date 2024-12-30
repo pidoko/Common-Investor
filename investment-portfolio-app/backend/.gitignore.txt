@@ -1,0 +1,17 @@
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.env
+
+# Logs
+*.log
+
+# IDE files
+*.idea/
+*.vscode/
+
+# AWS Elastic Beanstalk deployment files
+.elasticbeanstalk/

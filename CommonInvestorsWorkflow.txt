@@ -1,0 +1,13 @@
+Done:
+Extract 338 webpages as HTML.
+Parse MP's name and list of assets contained in matching header into csv file.
+Extract list of securities and store in another csv file to be used for backend.
+Prompt OpenAI with risk, timeframe, and budget.
+Output to React webpage.
+
+Todo:
+Store extracted name, filename and extracted assets into a database rather than csv.
+
+Host application in AWS for further testing.
+Automate running the web scraping every 30 days.
+Analyze the financial statements and strategy reported by each company or ETF.
