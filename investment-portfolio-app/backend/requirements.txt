@@ -4,3 +4,4 @@ pandas
 gunicorn
 openai
 python-dotenv
+pyportfolioopt

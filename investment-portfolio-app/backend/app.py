@@ -41,7 +41,15 @@ def generate_portfolio():
         return jsonify({'error': 'Securities list not loaded properly'}), 500
 
     # ChatGPT prompt
-    prompt = f"Acting as a seasoned Canadian portfolio manager talking to a client who does not know about the list of securities, create a categorized and then sorted ${budget} investment portfolio for a {time_frame} time frame with a {risk} risk appetite showing the amounts to be invested on individual rows and estimated annual returns. Then, discuss budget optimization strategies for the client, alongside the Canadian Government's past 10 year economy report, and adjustment advice. Use the following securities: {', '.join(securities_list)}."
+    prompt = f"""
+As a seasoned Canadian portfolio manager, explain the application of the Black-Litterman Model to a client with limited knowledge of securities. 
+Create a ${budget} investment portfolio for a {time_frame} time frame with a {risk} risk appetite, using the following securities: {', '.join(securities_list)}. 
+Discuss:
+1. Portfolio allocations based on categorized asset classes.
+2. The rationale behind the portfolio, including expected returns and risk optimization (using simplified Black-Litterman principles).
+3. Budget optimization strategies and adjustments.
+4. Insights from the Canadian Government's past 10 years of economic data.
+"""
     try:
         response = openai.ChatCompletion.create(
             model="gpt-4",
